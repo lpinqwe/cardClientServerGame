@@ -1,0 +1,5 @@
+{
+  "cmdType":"FIO_TEST",
+  "payload":"  {\"name\": \"myName\",\n    \"surname\": \"mySurname\"\n  }"
+
+}
