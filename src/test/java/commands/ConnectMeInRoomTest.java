@@ -1,0 +1,6 @@
+package commands;
+
+
+class ConnectMeInRoomTest {
+
+}

@@ -1,5 +1,6 @@
 import com.google.gson.Gson;
 import factory.CommandFactory;
+import gameLogic.MainRoom;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -9,6 +10,7 @@ import java.nio.channels.SocketChannel;
 
 public class ServerForGame {
     public void runServer() {
+        MainRoom mainRoom =new MainRoom();
         CommandFactory factory = new CommandFactory();
         final Gson gson = new Gson();
 
@@ -34,7 +36,8 @@ public class ServerForGame {
                     byte[] data = new byte[buffer.remaining()];
                     buffer.get(data);
                     System.out.println("Получено от клиента: " + new String(data));
-                    String resp = gson.toJson(factory.executeCommand(new String(data)));
+                    Object tmp =factory.executeCommand(new String(data),mainRoom);
+                    String resp = gson.toJson(tmp);
 
                     // Отправляем ответ клиенту
                     buffer.clear();

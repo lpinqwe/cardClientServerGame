@@ -1,5 +1,5 @@
 {
-  "cmdType":"FIO_TEST",
-  "payload":"  {\"name\": \"myName\",\n    \"surname\": \"mySurname\"\n  }"
-
+  "cmdType":"GET_MY_CURRENT_COUNT",
+  "payload": "newROOMID_test1",
+  "userName": "userID_1212"
 }
