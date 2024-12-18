@@ -1,0 +1,10 @@
+Oczko
+-wyciągamy kartę jeżeli koszt kart < 21 to nie przegraliśmy
+    /*
+    dziewiątka 	0 pkt.
+    dziesiątka 	10 pkt.
+    walet 	2 pkt.
+    dama 	3 pkt.
+    król 	4 pkt.
+    as 	11 pkt.
+    */

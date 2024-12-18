@@ -1,3 +1,4 @@
+/*
 import factory.CommandFactory;
 
 public class AppServer {
@@ -20,3 +21,4 @@ public class AppServer {
 
     }
 }
+*/

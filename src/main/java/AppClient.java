@@ -1,4 +1,6 @@
+/*
 import model.CommandEntity;
+
 import model.enums.CommandType;
 
 import java.util.Scanner;
@@ -75,7 +77,7 @@ public class AppClient {
 
         }
 
-/*
+
         cli.runCli(isExist);
         cli.runCli(roomList);
         cli.runCli(getCount);
@@ -91,7 +93,8 @@ public class AppClient {
         cli.runCli(roomList);
         cli.runCli(isExist);
         cli.runCli(isExistNOT);
-*/
+
 
     }
 }
+*/
