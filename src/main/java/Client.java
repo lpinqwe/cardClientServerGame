@@ -28,7 +28,7 @@ public class Client {
                     buffer.flip();
                     byte[] data = new byte[buffer.remaining()];
                     buffer.get(data);
-                    System.out.println("Ответ от сервера: " + new String(data));
+                    System.out.println("READ FROM SERVER: " + new String(data));
                 }
 
                 // Закрываем соединение с сервером

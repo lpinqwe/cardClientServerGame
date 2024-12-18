@@ -19,12 +19,12 @@ public class ServerForGame {
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
             serverSocketChannel.bind(new InetSocketAddress(5000));
 
-            System.out.println("Сервер запущен и ждет подключения...");
+            System.out.println("RUNSERVER & WAITING...");
 
             while (true) {
                 // Ожидаем подключения клиента
                 SocketChannel socketChannel = serverSocketChannel.accept();
-                System.out.println("Подключение установлено с " + socketChannel.getRemoteAddress());
+                System.out.println("CONNECTION CREATED  " + socketChannel.getRemoteAddress());
 
                 // Создаем буфер для чтения данных
                 ByteBuffer buffer = ByteBuffer.allocate(256);
@@ -35,7 +35,7 @@ public class ServerForGame {
                     buffer.flip();
                     byte[] data = new byte[buffer.remaining()];
                     buffer.get(data);
-                    System.out.println("Получено от клиента: " + new String(data));
+                    System.out.println("GET FROM CLIENT: " + new String(data));
                     Object tmp =factory.executeCommand(new String(data),mainRoom);
                     String resp = gson.toJson(tmp);
 
